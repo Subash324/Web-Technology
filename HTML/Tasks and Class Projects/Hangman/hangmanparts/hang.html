@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HangMan</title>
+    <link href="hang.css" rel="stylesheet">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="hang.js"></script>
+</head>
+
+<body onload="generateWord()">
+    <a href="hangman.html"><button class="btn">Home</button></a>
+    <a href="help.html"><button class="btn1">Help</button></a>
+    <h2 style="text-align: center;font-size: xx-large;">Hangman Game</h2>
+    <div style="background-color: white; 
+    width: fit-content;" id="sidebox" class="centre">
+
+        <img src="stand.PNG" class="stand">
+        <img src="bar.PNG" class="bar" style="margin: auto;display: block;">
+        <img src="head.PNG" class="head" id="imageid0">
+        <img src="neck.PNG" class="neck" id="imageid1">
+        <img src="lefthand.PNG" class="lefthand" id="imageid2">
+        <img src="righthand.PNG" class="righthand" id="imageid3">
+        <img src="stomach.PNG" class="stomach" id="imageid4">
+        <img src="rightfoot.PNG" class="rightfoot" id="imageid5">
+        <img src="leftfoot.PNG" class="leftfoot" id="imageid6">
+        <!-- <div id="boxid0" class="box">Wrong</div>
+        <div id="boxid1" class="box">Wrong</div>
+        <div id="boxid2" class="box">Wrong</div>
+        <div id="boxid3" class="box">Wrong</div>
+        <div id="boxid4" class="box">Wrong</div>
+        <br><br><br> -->
+        <!-- <div id="boxid5" class="box">Wrong</div>
+        <div id="boxid6" class="box">Wrong</div>
+        <div id="boxid7" class="box">Wrong</div>
+        <div id="boxid8" class="box">Wrong</div>
+        <div id="boxid9" class="box">Wrong</div> -->
+    </div>
+
+    <h4 style="text-align: center;font-size: large;margin-top: 3px;margin-bottom: 2px;" id="hideword">Hidden
+        Word (<span id="sizeid" class="blink_me"><a href="#" style="color: rgb(1, 0, 8);font-size: larger;"
+                onclick="hint()">Hint</a></span>)
+    </h4>
+    <div id="inputarea">
+        <!-- dynamic input box are created here -->
+    </div>
+    <br>
+    <div style="height: 122px;font-size: x-large;font-weight: bold ;">Guess here: <input type="text" name="guess"
+            id="guessid" placeholder="a to z" />
+        <button onclick="guessMe()" id="btnid">Just Guess</button>
+        <span id="incorrectid"
+            style="color: rgb(155, 13, 13);padding-left: 30px;font-size: x-large;font-weight: bolder;">
+            Wrong letters: </span><br>
+        <h1 id="wonorlooseid"></h1>
+
+        <div style="width: fit-content;">
+            <button onclick="location.reload()" class="btn3">Play Again</button>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

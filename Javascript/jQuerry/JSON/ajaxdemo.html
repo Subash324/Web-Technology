@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="ajaxid">
+        <h2>Chnage this content only without reloading the page</h2>
+    </div>
+    <button type="button" onclick="loadDoc('subbu.txt')">Chnage content</button>
+    <script>
+        function loadDoc(url) {
+            xhttpR = new XMLHttpRequest(); //Request object
+            xhttpR.onreadystatechange = function () {
+                if (xhttpR.readyState == 4 && xhttpR.status == 200) {
+                    document.getElementById("ajaxid").innerHTML = xhttpR.responseText;
+
+                }
+            };
+            xhttpR.open("GET", url, true);
+            xhttpR.send();//file text as response
+        }
+    </script>
+</body>
+
+</html>

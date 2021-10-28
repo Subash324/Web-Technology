@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression </title>
+</head>
+
+<body>
+    <p id="demoid"></p>
+    <p id="newid"></p>
+    <p id="matchid"></p>
+</body>
+
+<script>
+    let name = "Subash Adhikari Adhikari";
+    let n = new String("Raj Singhania");
+
+    //Search() function
+    var rename = name.search(/Adhi/i);//i is for case sensitive
+    document.getElementById("demoid").innerHTML = "Adhi is in " + rename;// -1 is for not found.
+
+    //Replace() function
+    var sname = name.replace(/Adhikari/i, "Sharma");
+    document.getElementById("newid").innerHTML = sname;
+    var sname = name.replace(/Adhikari/g, "Sharma"); // g for global
+    document.getElementById("newid").innerHTML = sname;
+
+    //match() function/method with g modifier
+    var pattern = /is/g;
+    var matching = name.match(pattern);
+    document.getElementById("matchid").innerHTML = matching;
+
+    //match() function/method with m modifier
+    let college = "vedas College is  \n  in \n Jawalakhel is in patan";
+    document.write("<pre>" + college + "</pre"); //pre tag preserves the code format...code ma jasto thyo testae gari print hunxa output
+    let patter = college.match(/in/m); //searched in multiple lines
+    document.write(patter);
+
+
+
+</script>
+
+</html>

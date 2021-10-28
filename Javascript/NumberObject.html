@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Object and Methods</title>
+</head>
+<style>
+    body {
+        margin: auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Demonstrating the various methods in Number </h1>
+    <p id="n1"></p>
+    <p id="n2"></p>
+    <p id="n3"></p>
+</body>
+<script>
+    //var n1 = 111;
+    //  var n2 = 11;
+    // var n3 = 234e2;
+    // document.getElementById("n1").innerHTML = n1;
+    //   document.getElementById("n2").innerHTML = n2;
+    // document.getElementById("n3").innerHTML = n3;
+
+
+    //  var num1 = new Number(33);
+    //if (num1 == '33') {
+    //alert(num1 + "and " + num2 + "are equal");
+    // }
+    // else {
+    //    alert("did not match");
+    // }
+    bignum = Number.MAX_VALUE;
+    document.write(bignum + "<br>");
+    smallnum = Number.MIN_VALUE;
+    document.write(smallnum + "<br>");
+    document.write("Positive Infinity: =" + Number.POSITIVE_INFINITY + "<br>");
+    document.write("Positive Infinity: =" + Number.NEGATIVE_INFINITY + "<br>");
+
+    let date = new Date("November 14, 2021 08:55:22");
+    document.write(Number(date));
+    console.log((0.1 + 0.2).toFixed(1)); // 0.3
+    document.write("<br>" + (0.1 + 0.2).toFixed(1));//fixes after decimal value to 1.
+
+</script>
+
+</html>

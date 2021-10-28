@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text Word Wrap Properties</title>
+    <style>
+      @media only screen and (max-width: 300px) {
+        body {
+          background-color: rgb(17, 82, 27);
+          color: whitesmoke;
+        }
+        button {
+          width: 100%;
+        }
+        p {
+          width: 200px;
+        }
+      }
+      p {
+        word-wrap: break-word;
+        border: 2px solid red;
+      }
+      p.test1 {
+        word-break: keep-all;
+      }
+      p.test2 {
+        word-break: break-all;
+      }
+      p.test1 {
+        writing-mode: horizontal-tb;
+      }
+      span.test2 {
+        writing-mode: vertical-rl;
+      }
+      p.test2 {
+        writing-mode: vertical-rl;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium nemo
+      ad, suscipit, officia ducimus amet cum laudantium iusto porro deserunt
+      libero dolorem quibusdam culpa explicabo atque, praesentium dolore veniam
+      ex consequuntur fuga. Saepe, quisquam sit. Voluptatem qui officiis cum
+      inventore reiciendis! Asperiores odio quisquam libero vel laboriosam animi
+      laborum tenetur!
+    </p>
+    <p class="test1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium nemo
+      ad, suscipit, officia ducimus amet cum laudantium iusto porro deserunt
+      libero dolorem quibusdam culpa explicabo atque, praesentium dolore veniam
+      ex consequuntur fuga. Saepe, quisquam sit. Voluptatem qui officiis cum
+      inventore reiciendis! Asperiores odio quisquam libero vel laboriosam animi
+      laborum tenetur!
+    </p>
+    <p class="test2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium nemo
+      ad, suscipit, officia ducimus amet cum laudantium iusto porro deserunt
+      libero dolorem quibusdam culpa explicabo atque, praesentium dolore veniam
+      ex consequuntur fuga. Saepe, quisquam sit. Voluptatem qui officiis cum
+      inventore reiciendis! Asperiores odio quisquam libero vel laboriosam animi
+      laborum tenetur!
+    </p>
+    <span class="test2"
+      >explicabo atque, praesentium dolore veniam ex consequuntur fuga. Saepe,
+      quisquam sit. Voluptatem qui officiis cum inventore reiciendis! Asperiores
+      odio quisquam libero vel laboriosam animi laborum tenetur!</span
+    >
+  </body>
+</html>

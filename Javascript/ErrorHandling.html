@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Error Handling </title>
+
+</head>
+
+<body>
+    <h2>Error Handling and Exception Handling
+
+    </h2>
+    <p id="errorid"></p>
+    <p id="finalid"></p>
+
+    <button id="btnid">Error</button>
+
+</body>
+<script>
+    // document.getElementById("btnid").addEventListener("click", newFunction);
+    // function newFunction() {
+    //     try {
+    //         alerta("abd");
+    //     } catch (err) {
+    //         document.getElementById("errorid").innerHTML = err.message;
+    //     }
+    // }
+
+    //=======================another method==========================
+    document.getElementById("btnid").onclick = function () {
+        try {
+            alerta("abd");
+        }
+        catch (err) {
+            document.getElementById("errorid").innerHTML = err.message;
+        }
+        finally {
+            document.getElementById("finalid").innerHTML = "I always execute.";//finally is always executed
+        }
+    }
+</script>
+
+</html>

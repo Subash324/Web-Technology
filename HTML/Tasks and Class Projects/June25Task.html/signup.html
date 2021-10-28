@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <!--
+<script defer src="script.js"> </script>
+
+   -->
+
+    <title>SignUp Form</title>
+    <script>
+        function validate() {
+            var username = document.signup.Username;
+            console.log(username.value.length);
+            if (username.value.length <= 0) {
+                alert("Name is required");
+                name.focus();
+                return false;
+            }
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- form start -->
+        <div class="my-form">
+            <h1 style="font-weight: bold;padding-left: 30px; padding-top: 30px;">Sign Up</h1>
+            <p style="padding-left: 30px; font-style:normal;">Please fill
+                in this form to create an account</p>
+            <hr>
+
+            <!-- main form -->
+            <form action="" method="POST" name="signup" onclick="return validate()" style=" padding-left: 30px ; ">
+                <div class=" single-input">
+                    <span><i class="fas fa-user"
+                            style="color: #535555;background-color: #F0EEF0; font-size: 32px;"></i></span>
+                    <input type="text" placeholder="Username" style="text-align:left;padding-top: 10px;">
+                </div>
+                <div class=" single-input">
+                    <span><i class="fa fa-paper-plane"
+                            style="color: #535555;background-color: #F0EEF0; font-size: 32px;"></i></span>
+                    <input type="text" placeholder="  Email Address" style="text-align:left;padding-top: 10px;">
+                </div>
+                <div class=" single-input">
+                    <span><i class="fas fa-lock"
+                            style="color: #535555;background-color: #F0EEF0; font-size: 32px;"></i></span>
+                    <input type="text" placeholder="  Password" style="text-align:left;padding-top: 10px;">
+                </div>
+
+                <div class=" single-input">
+                    <span><i class="fas fa-user-shield"
+                            style="color: #535555;background-color: #F0EEF0; font-size: 32px;"></i></span>
+                    <input type="text" placeholder="  Confirm Password" style="text-align:left;padding-top: 10px;">
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                        style="background-color: #F0EEF0;">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I accept the <a href="terms.txt" style="color:#00A89B;text-decoration: none;">Terms of
+                            use &nbsp;</a>& <a href="policy.txt" style="color:#00A89B;text-decoration: none;">&nbsp;
+                            Privacy
+                            Policy.</a>
+                    </label>
+                </div>
+
+
+
+                <button class="button button1" type="submit"
+                    style="background-color: #008E83 ; color: white; width: 180px; margin-top: 30px;font-size: x-large;text-align: center;height: 50px;border-radius: 3px; border: none; font-weight: bold;">Sign
+                    Up</button><br><br>
+                <div id="error"></div>
+
+
+                <br><br>
+                <span style="font: lighter;">
+                    <h4 style="text-align: center;padding-top: 20px;font-weight:normal;color: white; ">Already have an
+                        account?<a href="loginForm.html" style="color: white;">Login here.</a>
+                    </h4>
+                </span>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <!--     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+-->
+
+
+
+</body>
+
+</html>

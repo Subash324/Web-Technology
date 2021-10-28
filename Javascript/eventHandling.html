@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Event Handling</title>
+</head>
+
+<body>
+    <h1 onmouseover="this.innerHTML='Vedas College'">Aberdeen College</h1>
+    <h1 onmouseout="this.innerHTML='Vedas College'">Subash College</h1>
+
+    <!-- keypress = onmouse and keyrelease = mouseuo -->
+    <h1 onmousedown="redcolor()" onmouseup="bluecolor()">Change Body color</h1>
+
+    <!-- onchange Event -->
+    Enter Name:<input type="text" id="fname" onchange="caseChange()">
+    <h3 id="capitalid"></h3>
+    <!-- deshant's copied afterwards -->
+    <h3 onmouseenter="this.innerHTML = 'Vedas College'" onmouseleave="this.innerHTML ='Aberdeen College'">Aberdeen
+        College</h3>
+    <div id="showid">
+
+
+
+</body>
+<script>
+    function caseChange() {
+        let n = document.getElementById("fname");
+        document.getElementById("capitalid").innerHTML = n.value.toUpperCase();
+    }
+
+    function redcolor() {
+        document.body.style.background = 'red';
+    }
+    function bluecolor() {
+        document.body.style.background = 'blue';
+    }
+</script>
+
+</html>

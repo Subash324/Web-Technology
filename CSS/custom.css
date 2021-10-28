@@ -1,0 +1,30 @@
+p{
+    color: blue;
+    font-weight: 400;
+    text-align: justify;
+}
+
+div{
+    background-color:  violet;
+    padding: 10;
+    margin: 10px;
+}
+
+.down{
+    width: 500px;
+    height: 200px;
+    background-image: url("C:/Users/That Guy From Nepal/Desktop/1.jpg");
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*
+body{
+    background-image: url("C:/Users/That Guy From Nepal/Desktop/1.jpg");
+    background-size: 500px 500px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+*/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Variables</title>
+</head>
+<style>
+    button {
+        height: 50px;
+        width: 60px;
+        margin: auto;
+        display: block;
+    }
+</style>
+
+<body>
+    <p id="testid"></p>
+    <button onclick="document.getElementById('harry').innerHTML = 'This javascript video is very helpful'">try</button>
+    <p id="harry"></p>
+
+    <script>
+        var x = 10;
+        var y = 100;
+        {
+            let x = 20;//not accessible from outside
+            var y = 50;// accessible from outside
+        }
+        function add(x, y) {
+            var sum;
+            sum = x + y;
+            return sum;
+        }
+        document.getElementById("testid").innerHTML = "The sum of" + x + "and" + y + "is= " + sum(x, y);
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h7 class="hide">
+        Parking Ticket
+    </h7>
+
+    <button class="hide" onclick="ticket()">Get ticket</button>
+
+    <table>
+        <tr>
+            <td id="type"></td>
+
+        </tr>
+        <tr>
+            <td id="hour"></td>
+
+        </tr>
+        <tr>
+            <td id="rate"></td>
+        </tr>
+        <tr>
+            <td id="amount"></td>
+        </tr>
+    </table>
+</body>
+<script>
+    var ratecar = 1;
+    var ratebus = 2;
+    var ratetruck = 3;
+
+
+    function ticket() {
+        // var tag = document.getElementsByClassName("hide").innerHTML;
+        // tag.style.visibility = 'hide';
+        let code = window.prompt("'C' for car, 'T' for Truck, 'B' for bus", "Enter vechile code:");
+        let time = window.prompt("How many hours?", "Enter the no of hours parked:");
+        var amt = 0;
+        switch (code) {
+            case 'C':
+                amt = 1 * time;
+                document.getElementById("type").innerHTML = "Vehicle Type  : Car <br>";
+                document.getElementById("hour").innerHTML = "Hours Parked   :" + time;
+                document.getElementById("rate").innerHTML = "Parking Rate / Hr   :$" + ratecar;
+                document.getElementById("amount").innerHTML = "Amount to Pay: $" + amt;
+
+
+            case 'B':
+                amt = 2 * time;
+                document.getElementById("type").innerHTML = "Vehicle Type  : BUS <br>";
+                document.getElementById("hour").innerHTML = "Hours Parked   :" + time;
+                document.getElementById("rate").innerHTML = "Parking Rate / Hr   :$" + ratebus;
+                document.getElementById("amount").innerHTML = "Amount to Pay: $" + amt;
+            case 'T':
+                amt = 3 * time;
+                document.getElementById("type").innerHTML = "Vehicle Type  : Truck <br>";
+                document.getElementById("hour").innerHTML = "Hours Parked   :" + time;
+                document.getElementById("rate").innerHTML = "Parking Rate / Hr   :$" + ratetruck;
+                document.getElementById("amount").innerHTML = "Amount to Pay: $" + amt;
+
+        }
+
+    }
+</script>
+
+</html>

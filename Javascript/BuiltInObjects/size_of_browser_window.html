@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window size</title>
+</head>
+
+<body>
+    <p id="winID"></p>
+
+
+</body>
+<script>
+    var width = window.innerWidth || // all properties returns the width of a browser inner window
+        document.ducumentElement.clientWidth ||
+        document.body.clientWidth;
+    var height = window.innerHeight ||
+        document.ducumentElement.clientHeight ||
+        document.body.clientHeight; // all properties returns the height of a browser inner window
+    document.getElementById("winId").innerHTML = "Browser inner window width=" + width + "and height is=" + height;
+</script>
+
+</html>

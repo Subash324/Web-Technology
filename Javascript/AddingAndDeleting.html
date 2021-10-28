@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Adding and Deleting elements</title>
+</head>
+
+<body>
+    <div id="testid"></div>
+</body>
+<script>
+    var ul = document.createElement("ul");
+    var li = document.createElement("li");
+    // var div = document.getElementById("testid");
+    var div = document.getElementById("testid");
+    div.appendChild(ul);//hierarchy provided by appendchild() method
+
+    for (i = 1; i < 6; i++) {
+
+        li = document.createElement("li");
+        li.innerHTML = "this is a list tag" + i;
+        ul.appendChild(li);
+
+
+    }
+    // div.appendChild(ul);//hierarchy provided by appendchild() method
+    // ul.appendChild(li);
+    // li.innerHTML = "this is a list tag";
+    // li.innerHTML = "this is a list tag";
+    // li.innerHTML = "this is a list tag";
+
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            CSS Selector
+        </title>
+        <!--Selector{Property:value} Embedded or external CSS-->
+        <style>
+            body{
+                background-color: royalblue;
+            }
+
+            h1,h2,h3{
+                color: burlywood;
+            }
+
+            .right{
+                text-align: right;
+            }
+
+            .middle{
+                text-align: center;
+            }
+
+            .left{
+                text-align: left;
+            }
+
+            p{
+                color: red;
+            }
+
+            p.pclass{
+                color: green;
+            }
+
+            #divid{
+                background: orange;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="left">
+            Heading one
+        </h1>
+
+        <h2 class="middle">
+            Heading two
+        </h2>
+
+        <h3 class="right">
+            Heading three
+        </h3>
+
+        <p>
+            I am p tag.
+        </p>
+        <div id="divid">
+            <p class="pclass">P tag is inside the div tag hai guys!</p>
+        </div>
+
+        <p style="font-size: 25px; font-family: cursive; color: white;">
+        I am a p tag and I have inline css.
+        </p>
+
+    </body>
+</html>

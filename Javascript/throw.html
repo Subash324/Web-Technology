@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Throw Demonstration</title>
+</head>
+
+<body>
+    <input type="text" id="inputid">
+    <p id="demoid"></p>
+    <button type="button" onclick="numfunction()">Click me</button>
+    <!-- we are going to accept the value between 5 and 10 -->
+</body>
+<script>
+    function numfunction() {
+        const message = document.getElementById("demoid");
+        message.innerHTML = "";//empty
+        let inval = document.getElementById("inputid").value;
+        try {
+            if (inval == "") throw "field is empty";
+            if (isNaN(inval)) throw "field is not a number";
+            inval = Number(inval);//"32"==32  <- type conversion
+            if (inval < 5) throw "is too small";
+            if (inval > 10) throw "is too large";
+            message.innerHTML = "Input is : " + inval;
+
+
+        }
+        catch (err) {
+            message.innerHTML = "Input" + err;
+
+        }
+        finally {
+            document.getElementById("inputid").placeholder = "enter number between 5 and 10";
+        }
+        // throw keyword passes the execution pointer to the catch block
+    }
+</script>
+
+</html>

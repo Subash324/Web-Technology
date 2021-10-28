@@ -1,0 +1,51 @@
+ul.discClass{
+    list-style-type: disc;
+}
+
+ul.squareClass{
+    list-style-type: square;
+}
+ul.circleClass{
+    list-style-type: circle;
+}
+ul.noneClass{
+    list-style-type: none;
+}
+
+
+
+
+
+ol#decimalID{
+    list-style-type: decimal-leading-zero;
+}
+
+ol#lowerRomanId{
+    list-style-type: lower-roman;
+}
+ol#upperRomanId{
+    list-style-type: upper-roman;
+}
+ol#upperAlphabetId{
+    list-style-type: upper-alpha;
+}
+ol#lowerAlphabetId{
+    list-style-type: lower-alpha;
+}
+
+ul#imageMarkerId{
+    list-style-image: url("E:\5th sem\web technology\html programs\icon.png");
+}
+
+
+
+ul.outside{
+    list-style-position: outside;
+}
+ul.inside{
+    list-style-position: inside;
+}
+li{
+    border: 2px solid blue;
+    margin: 5px;
+}

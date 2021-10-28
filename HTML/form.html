@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title> Event Demo </title>
+    </head>
+    <body onresize="alert('I am resizing...')" onload="alert('I am loading...')" onoffline="alert('I am offilne')">
+        <form onsubmit="calljsfunction()">
+            <input type="button" name="mybtn" value="Click" onclick="callfunction()">
+            <input type="submit" value="save">
+        </form>
+    </body>
+</html>
+
+<script>
+    function calljsfunction(){
+        alert('You have subbmitted a form.');
+    }
+    function callfunction(){
+        alert('You have clicked')
+    }
+</script>

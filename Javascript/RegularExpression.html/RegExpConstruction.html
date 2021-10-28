@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp Construction</title>
+</head>
+
+<body>
+    <p id="resid"></p>
+</body>
+<script>
+    //test() method Demonstration
+    var str = "Happy Birthday!";
+    var re = new RegExp("happy", "i");//case sensitive
+    var res = re.test(str);// test le vettauda true garxa natra false garxa
+    document.getElementById("resid").innerHTML = res;
+
+    //exec() method construction
+    let url = "https://vedascollege.edu.np/";
+    //creating regex ogject
+    let reg = new RegExp(/[^e]+/, 'g');//rule is one or more non dot characters
+    let reg1 = new RegExp(/[.]+/);//rule is one or more dot characters
+    let result1 = reg.exec(url);
+    let result2 = reg1.exec(url);
+    document.write(result1);
+    document.write("<br>" + result2);
+
+
+
+    //substring() method
+    let result3 = reg.exec(url)[0].substring(8);
+    let result4 = reg.exec(url)[0].substring(8, 13);
+
+    document.write(result);
+    document.write(result4);
+
+    //using toString method
+    var pattern = new RegExp("Hello Guys", "g");
+    let result5 = patetrn.toString();
+    document.write(result5);
+
+
+
+
+
+
+
+</script>
+
+</html>

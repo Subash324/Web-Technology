@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Sorted names are:</h2>
+    <p id="nameid"></p>
+    <p id="numberid"></p>
+
+
+</body>
+<script>
+    var students = ["Deshant", "Subash", "Anuj", "Sagar", "Anjil", "Bikram", "Dhiraj"];
+    let numb = [7, 8, 4, 90, 2, 3, 5, 1, 91, 40];
+    document.getElementById("nameid").innerHTML = students.sort();
+    //document.getElementById("numberid").innerHTML = numb.sort();
+    document.getElementById("numberid").innerHTML = numb.sort(function (a, b) {
+        return b - a; // Descending
+
+    });
+    document.getElementById("numberid").innerHTML = numbers.sort(function (a, b) {
+        return a - b; // Ascending
+    });
+
+</script>
+
+</html>

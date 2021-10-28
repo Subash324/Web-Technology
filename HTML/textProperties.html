@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text Properties</title>
+    <style>
+      #textId {
+        overflow: scroll;
+        text-overflow: ellipse;
+        border: 2px solid blue;
+        white-space: nowrap;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="textId">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nihil
+      blanditiis porro illum! Unde, eligendi eaque ipsum perferendis tempore
+      hic? Beatae, expedita laboriosam pariatur corporis consequuntur ratione
+      quidem? Labore, quidem asperiores repellat cumque adipisci cupiditate.
+    </p>
+    <button onclick="readmore()">Readmore..</button>
+  </body>
+  <script>
+    function readmore() {
+      var x = document.getElementById("textId");
+      x.style.overflow = "visible";
+      x.style.whiteSpace = "normal";
+      x.style.textOverflow = "hidden";
+      x.style.backgroundColor = "green";
+    }
+  </script>
+</html>

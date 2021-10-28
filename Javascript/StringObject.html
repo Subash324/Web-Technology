@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="nameid"></p>
+</body>
+<script>
+    //declaring string variables
+    // var n = "Deshant Devkota";
+    var name = new String("Subash Adhikari");
+    var split = name.split(); //string object is splitted into array of strings
+    document.getElementById("nameid").innerHTML = split;
+
+    document.write("charAt(4) gives = " + name.charAt(4));// displays the character at the given location
+
+
+    document.write("<br>charCodeAt(4) gives = ASCII value of    " + name.charAt(4) + "  " + "is  " + name.charCodeAt(4));
+    // finding ASCII code of a character at some specified index
+
+
+
+    document.write("<br>indexOf(kari) gives =  " + name.indexOf("kari"));// finding index of the given substring
+
+
+
+
+    //Replacing substring
+    let str;
+    str = name.replace("kari", "karki");// it only returns the value but doesnot overwrites in the variable.
+    document.write(str + "<br>");
+
+    //next way
+    document.write(name.replace("kari", "karki") + "<br>");
+
+
+
+    //searching a sub-string in any string
+    document.write(name.search("ash"));
+
+    //changing teh case of a string 
+    name = name.toUpperCase();
+    document.write("<br>" + name);
+    //changing teh case of a string 
+    name = name.toLowerCase();
+    document.write("<br>" + name);
+
+
+    //ssubstring
+    //substr()
+    document.write("<br>" + name.substring(9, 12));
+
+</script>
+
+</html>

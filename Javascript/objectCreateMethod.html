@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Object .Create method </title>
+</head>
+
+<body>
+    <h3 style="cursor:grab;" onclick="this.innerHTML='Vedas College'"> Aberdeen College</h3>
+    <div id="showid"></div>
+</body>
+<script>
+    let college = {
+        name: 'Vedas',
+        address: 'Jawalakhel',
+        programs: 'CSIT BCA BBM BBS',
+        display: function () {
+            document.getElementById('showid').innerHTML = this.name + "<br>" + this.address + "<br>" + " is offerering:<br>" + this.programs + "  programs";
+
+        }
+    }
+    let col = Object.create(college);
+    col.programs = "CSIT BCA BBM";
+    col.display();
+</script>
+
+</html>

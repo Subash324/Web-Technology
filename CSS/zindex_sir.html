@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      img.x {
+        position: absolute;
+        left: 50px;
+        top: 60px;
+        z-index: -1;
+        color: red;
+      }
+
+      .y {
+        position: absolute;
+        left: 50px;
+        top: 60px;
+        z-index: 1;
+        color: red;
+      }
+
+      p.ptag {
+        position: absolute;
+        left: 50px;
+        top: 60px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <img class="x" src="image/key.png" height="180" />
+    <img class="y" src="image/pp.jpg" width="100px" height="100px" />
+
+    <p>Default z-index is 0. Z-index -1 has lower priority.</p>
+    <p class="ptag">I am above the the key image</p>
+  </body>
+</html>

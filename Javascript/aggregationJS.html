@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Aggregation in JavaScript</title>
+</head>
+<style>
+    .table-border {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+    <table class="table-border">
+        <tr class="table-border">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Rollno</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+        </tr>
+        <tr class="table-border">
+            <td id="nameid"></td>
+            <td id="ageid"></td>
+            <td id="rollid"></td>
+            <td id="cityid"></td>
+            <td id="stateid"></td>
+            <td id="countryid"></td>
+
+        </tr>
+    </table>
+</body>
+<script>
+    function Address(city, state, country) {//Function name started with capital is an constructor function
+        this.addCity = city;
+        this.addState = state;
+        this.addCountry = country;
+    }
+    function Student(name, age, rollno, address) {
+        this.stuName = name;
+        this.stuAge = age;
+        this.stuRollno = rollno;
+        this.stuAddress = address;
+    }
+    //creating objects of both constructor functions
+    let add = new Address("Kathmandu", "Bagmati", "Nepal");
+    let std = new Student("Subash", 20, 10, add);
+
+    document.getElementById("nameid").innerHTML = std.stuName
+    document.getElementById("ageid").innerHTML = std.stuAge
+    document.getElementById("rollid").innerHTML = std.stuRollno
+    document.getElementById("cityid").innerHTML = std.stuAddress.addCity
+    document.getElementById("stateid").innerHTML = std.stuAddress.addCountry
+    document.getElementById("countryid").innerHTML = std.stuAddress.addState
+
+</script>
+
+</html>

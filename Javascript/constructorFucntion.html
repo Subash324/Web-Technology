@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>User Defined Constructor Function</title>
+</head>
+
+<body>
+    <div id="infoid"></div>
+</body>
+<script>
+    //Constructor Function
+    //no need to declare variables because JS is a ;oosely typed language
+    function Employee(id, name, address) {
+        this.identity = aid;
+        this.empname = name;
+        this.empaddress = address;
+
+    }
+    //creating objects
+    let employee = new Employee(101, "Subash", "Kalanki");
+    document.getElementById("infoid").innerHTML = employee.emoname + "and" + employee.empaddress;
+</script>
+
+</html>

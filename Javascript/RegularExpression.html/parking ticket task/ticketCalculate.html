@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <title>Parking Receipt</title>
+</head>
+<style>
+    body {
+        background-color: rgb(231, 221, 207);
+    }
+
+    .container {
+        background-color: white;
+        height: 60vh;
+        width: 15rem;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        margin: 14vh 20vh 0vh 83.5vh;
+        display: block;
+        border-radius: 1rem;
+    }
+
+    .start {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        width: 87%;
+    }
+
+    hr {
+        width: 80%;
+        margin: auto;
+        display: block;
+        height: 2px;
+        background-color: black;
+    }
+
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 4px;
+        font-family: cursive;
+    }
+
+    .end {
+        margin-top: 0.1rem;
+        margin-left: 1rem;
+        width: 87%;
+    }
+
+    .main {
+        height: 8.4rem;
+    }
+
+    .hidden {
+        margin: auto;
+        display: block;
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 2rem;
+        width: 10rem;
+        font-size: large;
+        background-color: blanchedalmond;
+    }
+
+    .hidden .hidden:hover {
+        color: blanchedalmond;
+        background-color: blueviolet;
+    }
+
+    .center {
+        margin-left: 2rem;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <button class="hidden" onclick="receipt()">My Receipt</button>
+
+    <div class="container">
+        <!-- start logo image  -->
+        <img class="start" src="parking logo.PNG">
+        <hr>
+        <p>PARKING RECEIPT</p>
+        <hr>
+        <!-- main div for the billing  -->
+        <div class="main">
+            <p id="vehicle"></p>
+
+            <table class="center">
+                <tr>
+                    <td class="center" id="from"></td>
+                </tr>
+                <tr>
+                    <td class="center" id="to"></td>
+                </tr>
+            </table>
+            <h3 class="center" id="amount"></h3>
+        </div>
+        <hr>
+        <!-- Ending bar code image -->
+        <img src="end.PNG" alt="" class="end">
+    </div>
+    <button class="hidden" onclick="location.reload()">New receipt</button>
+
+
+
+
+</body>
+<script>
+
+
+    var ratecar = 50;
+    var ratebike = 25;
+    var ratecycle = 10;
+    // var time = 0;
+    // var date = 0;
+
+
+    // functions needed 
+    // 1) date convert to hours
+    // 2) subtract time and calculate hours
+
+
+
+    function receipt() {
+        let vehicle = window.prompt("1)cycle   2)bike  3)car", "Enter name in all small letter");
+        // var sdate = window.prompt("Format:dd/mm/yyyy", "Please donot include '/'");
+        let hours = parseInt(prompt("No of Hours you want to park", "0"), 10);
+
+        // var edate = window.prompt("Format:dd/mm/yyyy", "Please donot include '/'");
+        // let etime = window.prompt("Format:>hr:min", "End time");
+        var amount = 0;
+        // var hour = 0;
+        var fulldate = new Date();
+        var date = fulldate.getDay() + 25 + "/" + (fulldate.getMonth() + 1) + "/" + fulldate.getFullYear();
+        var time = fulldate.getHours() + ":" + fulldate.getMinutes();
+
+
+
+
+        // hour = etime - stime;
+        // function parkedfor(d, h) {
+
+        //     var total = 0;
+        //     var value = parseInt(time);
+        //     if (h < 24) {
+        //         total = time + h;
+
+        //     }
+
+        //     else {
+        //         total = fulldate.setDate((fulldate.getDay() + (h / 24)) + "/" + (fulldate.getHours() + h % 24));
+        //     }
+        //     return total;
+
+        // }
+        // var parkedtime = parkedfor(date, hours);
+
+
+        switch (vehicle) {
+            case 'cycle':
+
+                amount = ratecycle * hours;
+                document.getElementById("vehicle").innerHTML = vehicle;
+                document.getElementById("from").innerHTML = "From:    " + date + "&nbsp &nbsp&nbsp&nbsp" + time + "<br>";
+                document.getElementById("to").innerHTML = "  To:    " + hours + "hours<br>";
+                document.getElementById("amount").innerHTML = "To be PAID:" + amount + "Rs";
+            case 'bike':
+
+                amount = ratebike * hours;
+                document.getElementById("vehicle").innerHTML = vehicle;
+                document.getElementById("from").innerHTML = "From:    " + date + "&nbsp &nbsp&nbsp&nbsp" + time + "<br>";
+                document.getElementById("to").innerHTML = "  To:    " + hours + "   hours<br>";
+                document.getElementById("amount").innerHTML = "To be PAID:" + amount + "Rs";
+            case 'car':
+
+                amount = ratecar * hours;
+                document.getElementById("vehicle").innerHTML = vehicle;
+                document.getElementById("from").innerHTML = "From:    " + date + "&nbsp &nbsp&nbsp&nbsp" + time + "<br>";
+                document.getElementById("to").innerHTML = "  To:    " + hours + "   hours<br>";
+                document.getElementById("amount").innerHTML = " To be PAID:" + amount + "Rs";
+        }
+
+    }
+</script>
+
+</html>

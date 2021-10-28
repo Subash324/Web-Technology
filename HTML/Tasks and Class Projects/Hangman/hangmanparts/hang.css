@@ -1,0 +1,143 @@
+/* .box {
+    border: 3px solid blue;
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+} */
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+  color: rgb(0, 14, 0);
+}
+@keyframes blinker {
+  100% {
+    opacity: 0;
+  }
+}
+.btn {
+  float: left;
+  background-image: radial-gradient(yellow, teal);
+  font-weight: bold;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 0.3rem;
+}
+.btn1 {
+  float: right;
+  background-image: radial-gradient(yellow, teal);
+  font-weight: bold;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 0.3rem;
+}
+.btn3 {
+  margin: auto;
+  display: block;
+  background-image: radial-gradient(yellow, teal);
+  font-weight: bold;
+  height: 3rem;
+  width: 20rem;
+  margin-top: 9px;
+  font-size: large;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+}
+.btn3:hover {
+  width: 25rem;
+  height: 3.3rem;
+  left: 36%;
+  transform: translate3d(2px, 2px, 2px);
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-image: linear-gradient(yellow, teal);
+}
+div {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+#guessid {
+  width: 4rem;
+  height: 1.5rem;
+  font-size: x-large;
+  background-color: rgb(176, 231, 103);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#optionid {
+  width: 25px;
+}
+
+#btnid {
+  background-color: green;
+  color: black;
+  background-image: radial-gradient(yellow, teal);
+  font-weight: bold;
+  height: 2rem;
+  width: 9rem;
+  font-size: large;
+  margin-left: 10px;
+  border-radius: 0.4rem;
+}
+.stand {
+  top: 108.7px;
+  left: 695px;
+}
+
+.bar {
+  position: absolute;
+  top: 108.7px;
+  left: 695px;
+}
+
+.head {
+  position: absolute;
+  top: 137px;
+  left: 727px;
+}
+
+.neck {
+  position: absolute;
+  top: 194px;
+  left: 763px;
+}
+
+.lefthand {
+  position: absolute;
+  top: 208px;
+  left: 705px;
+  z-index: 0;
+}
+
+.righthand {
+  position: absolute;
+  top: 216px;
+  left: 775px;
+}
+
+.stomach {
+  position: absolute;
+  top: 217px;
+  left: 760px;
+}
+
+.leftfoot {
+  position: absolute;
+  top: 345px;
+  left: 766px;
+}
+
+.rightfoot {
+  position: absolute;
+  top: 345px;
+  left: 719px;
+}

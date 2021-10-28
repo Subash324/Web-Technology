@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Demonstration</title>
+</head>
+
+<body id="bgcolorid">
+    <div style="margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+  
+    background-color: bisque;
+    
+    z-index: 100;">
+        <p style="text-align: center;margin-top: 0px;">Type the colorname in all small letters, hit the magic button and
+            see
+            magic.</p>
+        <label style="margin-left: auto;margin-right: auto;display: block;text-align: center;font-weight: bold;">Enter
+            here:</label><input type="text" name="color" id="colorid" style="margin: auto;display: block;">
+        <button onclick="changecolor()"
+            style="background-color: rgb(121, 121, 187);font-weight: bold;margin: auto;display: block;margin-top: 1%; border-radius: 20%;">Magic</button>
+    </div>
+
+    <script>
+        function changecolor() {
+            var color = document.getElementById("colorid").value;
+            switch (color) {
+                case "red":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=red> </body>");
+                    break;
+                case "green":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=blue> </body>");
+                    break;
+                case "blue":
+                    document.getElementById("bgcolorid").style.background = color;
+                    //document.write("<body bgcolor=yellow> </body>");
+                    break;
+                case "yellow":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=green> </body>");
+                    break;
+                case "pink":
+                    document.getElementById("bgcolorid").style.background = color;
+                    //document.write("<body bgcolor=pink> </body>");
+                    break;
+                case "violet":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=orange> </body>");
+                    break;
+                case "purple":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=purple> </body>");
+                    break;
+                case "orange":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=orange> </body>");
+                    break;
+                case "brown":
+                    document.getElementById("bgcolorid").style.background = color;
+                    // document.write("<body bgcolor=purple> </body>");
+                    break;
+
+                default: document.write("Invalid choice");
+
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
