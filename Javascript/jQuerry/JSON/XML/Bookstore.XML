@@ -1,0 +1,21 @@
+<bookstore>    <!--root element-->
+    <book category='Programming'>
+        <title lang='English'>Web Technology</title>
+        <author>Subbu</author>
+        <year>2021</year>
+        <price>Rs.2000</price>
+    </book>
+    <book category='Programming'>
+        <title lang='English'>DSA</title>
+        <author>Hari</author>
+        <year>2000</year>
+        <price>Rs.1000</price>
+    </book>
+    <book category='Novel'>
+        <title lang='Nepali'>Muna Madan</title>
+        <author>Laxmi Prasad Devkota</author>
+        <year>1997</year>
+        <price>Rs.700</price>
+    </book>
+
+</bookstore>
