@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Html Events</title>
+</head>
+
+
+<body>
+    <h3>Mouse Events</h3>
+    <button onclick="alert( 'This is mouse event' );">Click</button>
+    <button onmouseout="alert( 'This is mouse event' );">Mouseout</button>
+    <button ondblclick="alert( 'This is ondbclick' );">DoubleClick</button>
+    <button onmouseover="alert( 'This is onmouseover' );">Mouseover</button>
+    <span onmousedown="alert( 'This is onmousedown' );">MouseDown</span>
+    <hr>
+
+    <h3>Keyboard Events</h3>
+    <button onkeydown="alert('This is a key Down')">KeyDown</button>
+    <button onkeypress="alert('This is a key Press')">KeyPress</button>
+    <button onkeyup="alert('This is a key Up')">KeyUp</button>
+    <hr>
+    <h3>Form Events</h3>
+    <form method="get">
+        Name: <input type="text" oninvalid="alert('You must fill out the form!');" name="fname" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="college"></p>
+    <select id="mySelect" onchange="document.getElementById('college').innerHTML = 'You selected: ' + document.getElementById('mySelect').value">
+    <option value="Vedas">Vedas
+    <option value="AOSCOL">AOSCOL
+    <option value="Madan Bhandari">Madan Bhandari
+    <option value="Academia">Academia
+  </select>
+    <input type="text" value="Select me!!" onselect="alert('This is a form event')">
+
+    </head>
+
+
+</html>
