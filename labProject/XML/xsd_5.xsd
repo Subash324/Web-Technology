@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="class">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="student" maxOccurs="unbounded" >
+                <xs:complexType  mixed="true">
+                    <xs:sequence>
+                        <xs:element name="name" type="xs:string"/>
+                        <xs:element name="id" type="xs:integer"/>
+                        <xs:element name="branch" type="xs:string" minOccurs="1" maxOccurs="3"/>
+                        <xs:element name="cgpa" type="xs:string"/>
+            
+                    </xs:sequence>
+        <!-- <xs:attribute name="id" type="xs:integer" use="required"/> -->
+
+                </xs:complexType>
+            </xs:element>
+          
+
+        </xs:sequence>
+        
+    </xs:complexType>
+    
+</xs:element>
+
+</xs:schema>

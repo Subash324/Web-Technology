@@ -1,0 +1,30 @@
+<!DOCTYPE class [
+<!ELEMENT class (#PCDATA|student)*>
+<!ELEMENT student (name,id,branch,cgpa)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT cgpa (#PCDATA)>
+<!ATTLIST student id CDATA #REQUIRED>
+
+]>
+<class>
+    <student id="001">
+    <name> Subhash </name>
+    <id> 001 </id>
+    <branch> CSIT </branch>
+    <cgpa> 9.0 </cgpa>
+    </student>
+    <student id="003">
+    <name> Mahesh </name>
+    <id> 003 </id>
+    <branch> BCA </branch>
+    <cgpa> 8.0 </cgpa>
+    </student>
+    <student id="008">
+    <name> Anup </name>
+    <id> 008 </id>
+    <branch> BBM </branch>
+    <cgpa> 7.8 </cgpa>
+    </student>
+    </class>

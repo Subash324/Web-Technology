@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd_5.xsd">
+     <student  >
+        <name> Subhash </name>
+        <id> 001 </id>
+        <branch> CSIT </branch>
+        <cgpa> 9.0 </cgpa>
+        </student>
+        <student >
+        <name> Mahesh </name>
+        <id> 003 </id>
+        <branch> BCA </branch>
+        <cgpa> 8.0 </cgpa>
+        </student>
+        <student >
+        <name> Anup </name>
+        <id> 008 </id>
+        <branch> BBM </branch>
+        <cgpa> 7.8 </cgpa></student>
+       
+    
+        </class>

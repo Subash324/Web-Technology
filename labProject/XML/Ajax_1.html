@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Reading The XML Elements </title>
+</head>
+<style>
+    .center {
+        margin: auto;
+        display: block;
+        text-align: center;
+        font-size: xx-large;
+    }
+    
+    table,
+    td,
+    th {
+        border: 1px solid black;
+        padding: 1rem;
+    }
+    
+    table {
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+
+    <div class="center">
+        <h3>Best Students of Vedas College</h3>
+        <button class="center" onclick="loadXMLfile()">Show Students</button>
+        <p id="stuid"></p>
+        <table style="margin:auto;display: block;width: fit-content;">
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Branch</th>
+                <th>CGPA</th>
+
+            </tr>
+            <tr>
+                <td id="name"></td>
+                <td id="id"></td>
+                <td id="branch"></td>
+                <td id="cgpa"></td>
+
+            </tr>
+
+        </table>
+    </div>
+    <script>
+        function loadXMLfile() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    listStu(this);
+                }
+            };
+            xmlhttp.open("GET", "Ajax_1.xml", true);
+            xmlhttp.send();
+        }
+
+        function listStu(data) {
+            var tags, i, xmldoc, nametag = "",
+                idtxt = "",
+                idtags = "",
+                branchtags = "",
+                branchtxt = "",
+                gpatags = "",
+                gpatxt = "";
+            xmldoc = data.responseXML;
+            nametags = xmldoc.getElementsByTagName("name");
+            idtags = xmldoc.getElementsByTagName("id");
+            branchtags = xmldoc.getElementsByTagName("branch");
+            gpatags = xmldoc.getElementsByTagName("cgpa");
+
+            for (i = 0; i < nametags.length; i++) {
+                nametag += nametags[i].childNodes[0].nodeValue + "<br>";
+                document.getElementById("name").innerHTML = nametag;
+            }
+            for (i = 0; i < idtags.length; i++) {
+                idtxt += idtags[i].childNodes[0].nodeValue + "<br>";
+                document.getElementById("id").innerHTML = idtxt;
+            }
+            for (i = 0; i < idtags.length; i++) {
+                branchtxt += branchtags[i].childNodes[0].nodeValue + "<br>";
+                document.getElementById("branch").innerHTML = branchtxt;
+            }
+            for (i = 0; i < idtags.length; i++) {
+                gpatxt += gpatags[i].childNodes[0].nodeValue + "<br>";
+                document.getElementById("cgpa").innerHTML = gpatxt;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
