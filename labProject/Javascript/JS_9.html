@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>JSON FILE</title>
+</head>
+
+<body>
+    <p id="pid"></p>
+</body>
+<script>
+    // JSON data
+    const jsontxt = '{"name":"Subash", "age":"23", "city":"Dhapakhel"}';
+    const jsonarray = '["Subbu","Babu","Tulke","Prasad"]';
+    const jsobj = JSON.parse(jsontxt); //converting JSON to JavaScript object
+    document.getElementById("pid").innerHTML = jsobj.name + ", " + jsobj.age + ", " + jsobj.city;
+    const jsobjarray = JSON.parse(jsonarray); //converting json array into javascript array
+    document.write(jsobjarray[3]);
+    const jsstringify = JSON.stringify(jsontxt); //converting json array or text to string value of javascript
+    document.write(jsstringify);
+</script>
+
+</html>

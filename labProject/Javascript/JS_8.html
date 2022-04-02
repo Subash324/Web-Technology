@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <p id="id1">Click me and let me free</p>
+    <p id="id2"> If you double-click on me, I will disappear.</p>
+    <p id="id3">Enter paragraph p1.</p>
+    <p id="id4">This is a paragraph p1.</p>
+    <p id="id5">This is a paragraph.</p>
+    <p id="id6">This is a paragraph.</p>
+    <p id="id7">This is a paragraph.</p>
+    <p id="id8">Click or move the mouse pointer over this paragraph.</p>
+    <script>
+        $(document).ready(function() {
+            $("p#id1").click(function() {
+                $(this).hide();
+            });
+        });
+        $(document).ready(function() {
+            $("p#id2").dblclick(function() {
+                $(this).hide();
+            });
+        });
+        $(document).ready(function() {
+            $("#id3").mouseenter(function() {
+                alert("You entered p1!");
+            });
+        });
+        $(document).ready(function() {
+            $("#id4").mouseleave(function() {
+                alert("Bye! You now leave p1!");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#id5").mousedown(function() {
+                alert("Mouse down over p1!");
+            });
+        });
+        $(document).ready(function() {
+            $("#id6").mouseup(function() {
+                alert("Mouse up over p1!");
+            });
+        });
+        $(document).ready(function() {
+            $("id7").hover(function() {
+                    alert("You have entered here!");
+                },
+                function() {
+                    alert("Bye! You now leave here!");
+                });
+        });
+
+        $(document).ready(function() {
+            $("#id8").on({
+                mouseenter: function() {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function() {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function() {
+                    $(this).css("background-color", "yellow");
+                    $(this).css("text-align", "center");
+
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form validation</title>
+</head>
+
+
+<body><br><br>
+    <form name="myform" onsubmit="validateForm()" method="post">
+        <div class="container">
+
+            <h1>Registration Form</h1>
+            <hr><br>
+            <div class="innerDiv">
+                <table>
+                    <tr>
+                        <td><label for="fname">Full Name:</label></td>
+                        <td> <input type="text" name="fname"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td> <input type="email" name="email"></td>
+
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone no:</label></td>
+                        <td> <input type="number" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Address:</label></td>
+                        <td> <input type="text" name="address"></td>
+
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country:</label></td>
+                        <td> <input type="text" name="country"></td>
+
+                    </tr>
+                </table><br>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+            let name = document.forms["myform"]["fname"].value;
+            var length = name.length;
+            if (name == "") {
+                alert("Name error");
+            }
+            // -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+            // email validation
+            let inputText = document.forms["myform"]["email"];
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!(inputText.value.match(mailformat) || (mailformat == ""))) {
+                alert("You have entered an invalid email address!");
+
+            }
+            // -------------------------------------------------------------------
+            // phone validation
+            let phone = document.forms["myform"]["phone"].value;
+            var length = phone.length;
+            if ((phone == "" || (length > 15) || (length < 10))) {
+                alert("Phone number error");
+            }
+            // -----------------------------------------------------------------
+            // address validation
+            let addText = document.forms["myform"]["address"];
+            var addformat = /[a-zA-Z|,]/;
+            if (!(addText.value.match(addformat) || (addformat == ""))) {
+                alert("You have entered an invalid  address!");
+
+            }
+            // -----------------------------------------------------------------
+            // Country validation
+            let country = document.forms["myform"]["country"];
+            var format = /[a-zA-Z|,]/;
+            if (!(country.value.match(format) || (format == ""))) {
+                alert("You have entered an invalid  country name!");
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Built-in Objects In JavaScript</title>
+</head>
+<style>
+    h2 {
+        text-decoration: underline;
+    }
+    
+    hr {
+        width: 90%;
+    }
+    
+    h2,
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2>Date Object</h2>
+    <p id="dateid"></p>
+    <hr>
+    <h2>Window Object</h2>
+    <p id="winID"></p>
+    <hr>
+    <h2>Java Math Objects</h2>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <hr>
+    <h2>Boolean Object</h2>
+    <p id="boolean"></p>
+    <hr>
+    <h2>Number Object</h2>
+    <p id="lnumber"></p>
+    <p id="snumber"></p>
+
+    <script>
+        var date = new Date(); // it gives all the data attached with date object.
+        document.getElementById("dateid").innerHTML = date;
+        // ---------------------------------------------------
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        document.getElementById("winID").innerHTML = "Width of window: " + w + "<br>Height of window: " + h;
+        // document.getElementById("winId").innerHTML = "Browser inner window width=" + width + "and height is=" + height;
+        // --------------------------------------------------
+        var pi = Math.PI;
+        document.getElementById("id1").innerHTML = "The pi value is calculated: " + pi;
+        var posnum = Math.abs(-24); //convert negative values to psitive
+        document.getElementById("id2").innerHTML = "-24 changed to " + posnum;
+        var num = prompt("Enter number to calculate square root:", "16");
+        var x = Math.sqrt(num);
+        document.getElementById("id3").innerHTML = "Square root of " + num + " is: " + x;
+        // --------------------------------------------------------
+        var a = prompt("Number1:", "2");
+        var b = prompt("Number2:", "5");
+        document.getElementById("boolean").innerHTML = "Is " + a + " greater " + " than " + b + "<br>" + Boolean(a > b);
+        // ---------------------------------------------------------
+        var val1 = Number.MAX_VALUE;
+        document.getElementById("lnumber").innerHTML = "The largest number possible number is: " + val1;
+        let val2 = Number.MIN_VALUE;
+        document.getElementById("snumber").innerHTML = "The smallest number possible number is: " + val2;
+    </script>
+</body>
+
+</html>

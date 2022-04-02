@@ -1,0 +1,36 @@
+<html>
+<style>
+    h2,
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <h2>JavaScript Class</h2>
+
+    <p>We are using "Class" in JavaScript</p>
+
+    <p id="class"></p>
+
+    <script>
+        class Person {
+            constructor(name, birthday) {
+                this.name = prompt("Enter your name: ", "Subash");
+                this.birthday = prompt("Enter your birth year", "1999");
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.birthday;
+            }
+        }
+
+        const person = new Person("Subash", 1999);
+        document.getElementById("class").innerHTML = "Person's name: " +
+            person.name + " <br>" + "Person's age: " + person.age();
+    </script>
+
+</body>
+
+</html>
